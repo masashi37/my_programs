@@ -9,7 +9,7 @@
 
 class cMap{
 
-private:
+protected:
 
 	//画像の名前(№)
 	enum{
@@ -18,18 +18,17 @@ private:
 		MAP_MAX,
 	};
 
+
+	//タイプ名
+	enum{
+		NONE, WALL, START, GOAL,
+	};
+
 	std::ifstream* map_list[MAP_MAX];
 
 	int map_id;		//マップのID
 
-	//マップの数・サイズ
-	enum map{
-		LENGTH = 16,
-		WIDE = 9,
-		SIZE = 45,
-	};
-
-	int map_data[LENGTH][WIDE];	//マップデータ
+	int map_data[LENGTH][WIDE];	//マップデータを入れる
 
 	int red[LENGTH][WIDE], green[LENGTH][WIDE], blue[LENGTH][WIDE];
 	//マップデータ変更

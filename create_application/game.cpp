@@ -10,11 +10,15 @@ void cGame::updata(){
 	map.loadMaps();
 	map.mapTypeChange();
 
+	chara.updata();
+
 }
 
 void cGame::draw(){
 
 	map.draw();
+
+	chara.draw();
 
 }
 

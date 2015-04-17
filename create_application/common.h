@@ -17,6 +17,13 @@ enum logo_size{
 	LOGO_HEIGHT = HEIGHT_PERCENTAGE * 3,
 };
 
+//マップの数・サイズ
+enum map{
+	LENGTH = 13,
+	WIDE = 9,
+	ONE_SIZE = 45,
+};
+
 //画面の呼び名
 enum{
 	TITLE,
