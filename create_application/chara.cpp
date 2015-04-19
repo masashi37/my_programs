@@ -8,11 +8,6 @@ cChara::cChara(){
 	};
 
 	cMap::loadMaps();
-	
-}
-
-
-void cChara::updata(){
 
 	for (int y = 0; y < LENGTH; ++y){
 		for (int x = 0; x < WIDE; ++x){
@@ -22,10 +17,15 @@ void cChara::updata(){
 			}
 		}
 	}
+	
+}
 
-	/*move.move();
-	move.moveCancel();
-	move.wallAdsorb();*/
+
+void cChara::updata(){
+
+	move.move(chara.x,chara.y);
+	move.moveCancel(chara.x, chara.y);
+	move.wallAdsorb();
 
 }
 
